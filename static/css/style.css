@@ -1,0 +1,333 @@
+/* ========== BASE STYLES ========== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Share Tech Mono', monospace;
+    color: #0f0;
+}
+
+/* ========== TERMINAL CONTAINER ========== */
+.terminal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    box-shadow: none;
+}
+
+/* ========== TERMINAL HEADER ========== */
+.terminal-header {
+    background-color: #222;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    flex-shrink: 0;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-btn.red { background-color: #ff5f56; }
+.terminal-btn.yellow { background-color: #ffbd2e; }
+.terminal-btn.green { background-color: #27c93f; }
+
+.terminal-title {
+    margin-left: 15px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+/* ========== TERMINAL BODY ========== */
+.terminal-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.scan-title {
+    color: #0ff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-size: 1.5em;
+}
+
+/* ========== INPUT SECTIONS ========== */
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f0f;
+    font-size: 0.9em;
+}
+
+.terminal-input {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    border: 1px solid #444;
+    color: #0f0;
+    font-family: 'Ubuntu Mono', monospace;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1em;
+}
+
+.terminal-input:focus {
+    border-color: #0f0;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* ========== OPTIONS SECTION ========== */
+.options-group {
+    margin: 25px 0;
+    width: 100%;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff0;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.option-label input {
+    width: 18px;
+    height: 18px;
+}
+
+#length-options {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 4px;
+    width: calc(100% - 30px);
+}
+
+#length-options label {
+    color: #0af;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#pass_length {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#length-value {
+    color: #f80;
+    font-weight: bold;
+}
+
+/* ========== BUTTON STYLES ========== */
+.glow-btn {
+    background-color: #0a0;
+    color: #000;
+    border: none;
+    padding: 15px 25px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.glow-btn:hover {
+    background-color: #0f0;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+/* ========== RESULTS SECTION ========== */
+.results-section {
+    margin-top: 30px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.scan-progress {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #f00, #f80, #ff0, #0f0, #0ff);
+    transition: width 0.3s;
+}
+
+.progress-text {
+    text-align: right;
+    color: #0ff;
+    font-size: 0.9em;
+}
+
+/* ========== TERMINAL OUTPUT ========== */
+.terminal-output {
+    flex: 1;
+    min-height: 200px;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 15px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.95em;
+}
+
+.output-line {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    word-break: break-all;
+}
+
+.output-line::before {
+    content: ">";
+    color: #f0f;
+    margin-right: 8px;
+}
+
+/* ========== PASSWORD SUGGESTIONS ========== */
+.password-suggestions {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.password-suggestions h3 {
+    color: #0f0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.passwords-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.passwords-grid div {
+    background-color: #222;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: 'Ubuntu Mono', monospace;
+    word-break: break-all;
+    color: #ff0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9em;
+}
+
+.passwords-grid div:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+/* ========== TERMINAL FOOTER ========== */
+.terminal-footer {
+    background-color: #222;
+    padding: 10px 15px;
+    border-top: 1px solid #333;
+    flex-shrink: 0;
+}
+
+.status-line {
+    display: flex;
+    align-items: center;
+}
+
+.status-tag {
+    color: #f0f;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.status-value {
+    color: #0f0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}

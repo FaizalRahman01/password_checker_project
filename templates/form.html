@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Password Auditor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-title">PASSWORD AUDITOR v2.0</div>
+        </div>
+        
+        <div class="terminal-body">
+            <div class="scan-section">
+                <h2 class="scan-title">SECURITY SCAN INITIATED</h2>
+                
+                <div class="input-group">
+                    <label for="email">TARGET EMAIL:</label>
+                    <input type="email" id="email" class="terminal-input" placeholder="user@domain.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">PASSWORD TO AUDIT:</label>
+                    <input type="password" id="password" class="terminal-input" placeholder="********">
+                </div>
+                
+                <div class="options-group">
+                    <label class="option-label">
+                        <input type="checkbox" id="want_secure"> 
+                        <span>GENERATE SECURE PASSWORDS</span>
+                    </label>
+                    
+                    <div id="length-options" style="display: none;">
+                        <label>PASSWORD LENGTH: <span id="length-value">12</span></label>
+                        <input type="range" id="pass_length" min="6" max="32" value="12">
+                    </div>
+                </div>
+                
+                <button id="scan-btn" class="glow-btn">INITIATE SCAN</button>
+            </div>
+            
+            <div class="results-section">
+                <div class="scan-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0% COMPLETE</div>
+                </div>
+                
+                <div class="terminal-output" id="terminal-output">
+                    <div class="output-line">> SYSTEM READY</div>
+                </div>
+                
+                <div class="password-suggestions" id="password-suggestions" style="display: none;">
+                    <h3>SECURE PASSWORD SUGGESTIONS:</h3>
+                    <div class="passwords-grid" id="passwords-grid"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="terminal-footer">
+            <div class="status-line">
+                <span class="status-tag">STATUS:</span>
+                <span class="status-value" id="status-value">IDLE</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
