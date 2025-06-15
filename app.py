@@ -80,8 +80,8 @@ Stay protected!
 """
 
 def send_email(to_email, subject, body):
-    sender_email = "soulsentinel.alerts@gmail.com"
-    app_password = "urdq sqqx isjr hcxp" # WARNING: Hardcoding app passwords is not recommended for production. Use environment variables.
+    sender_email = "Add your email"
+    app_password = "Add your email App Password" # WARNING: Hardcoding app passwords is not recommended for production. Use environment variables.
 
     msg = MIMEMultipart("alternative") # Use alternative for rich text/HTML
     msg['Subject'] = subject
