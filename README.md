@@ -66,4 +66,4 @@ This is for educational use only. Do not use for illegal activities. Always take
 
 **Name:** Faizal Rahman  
 **Course:** BCA Final Year (Cybersecurity)  
-**Email:** yourmail@example.com
+**Email:** faizalrahman7834@gmail.com
