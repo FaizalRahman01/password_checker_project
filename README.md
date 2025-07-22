@@ -1,11 +1,11 @@
 
-# 🔐 Password Weakness Checker (Cybersecurity Mini Project)
+#  Password Weakness Checker (Cybersecurity Mini Project)
 
 This is a simple Flask web app to check if a user's Gmail password is weak by using a basic password list.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Web form to enter email
 - Uses a password list to try common passwords
@@ -13,7 +13,7 @@ This is a simple Flask web app to check if a user's Gmail password is weak by us
 
 ---
 
-## 🛠️ Requirements
+##  Requirements
 
 - Python 3.x
 - Flask
@@ -21,7 +21,7 @@ This is a simple Flask web app to check if a user's Gmail password is weak by us
 
 ---
 
-## 🔧 How to Run
+##  How to Run
 
 1. Open terminal inside project folder
 2. (Optional) Create a virtual environment:
@@ -56,13 +56,13 @@ This is a simple Flask web app to check if a user's Gmail password is weak by us
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 This is for educational use only. Do not use for illegal activities. Always take permission.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Name:** Faizal Rahman  
 **Course:** BCA Final Year (Cybersecurity)  
